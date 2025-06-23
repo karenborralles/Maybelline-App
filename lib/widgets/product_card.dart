@@ -16,7 +16,7 @@ class ProductCard extends StatelessWidget {
       shadowColor: Colors.black26,
       child: InkWell(
         onTap: () {
-          context.go('/detail', extra: product);
+          context.push('/detail', extra: product);
         },
         borderRadius: BorderRadius.circular(16),
         child: Padding(

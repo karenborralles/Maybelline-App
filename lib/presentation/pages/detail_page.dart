@@ -85,6 +85,13 @@ class _DetailPageState extends State<DetailPage> with SingleTickerProviderStateM
     return Scaffold(
       backgroundColor: const Color(0xFFF8F5F2), 
       appBar: AppBar(
+        automaticallyImplyLeading: false, // desactivamos el automático
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         title: Text(
           widget.product.name,
           style: const TextStyle(fontSize: 18),
